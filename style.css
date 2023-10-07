@@ -1,0 +1,33 @@
+.custom {
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  margin-bottom: 10px;
+  margin-left: 4px;
+  margin-top: 5px;
+  vertical-align: top;
+  position: relative;
+  z-index: 0;
+}
+.custom::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: absolute;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.real:checked + .custom::before {
+  transform: scale(1);
+}
+
+.real {
+  width: 100px;
+  height: 105px;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+}
