@@ -1,19 +1,35 @@
-.custom {
-  display: inline-flex;
-  width: 100px;
-  height: 100px;
-  background: yellow;
-  margin-bottom: 10px;
-  margin-left: 4px;
-  margin-top: 5px;
-  vertical-align: top;
-  position: relative;
-  z-index: 0;
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0px 8px 0px 0px;
 }
+
+.box {
+  flex-grow: 1;
+  min-width: 60px;
+  height: 105px;
+  margin: 5px 5px 5px 5px;
+}
+
+.box2 {
+  flex-grow: 1;
+  min-width: 100px;
+  height: 105px;
+  margin: 5px 5px 5px 5px;
+}
+
+.custom {
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+  position: relative;
+  z-index: -2;
+}
+
 .custom::before {
   content: "";
-  width: 100px;
-  height: 100px;
+  height: 100%;
+  width: 100%;
   background-color: green;
   position: absolute;
   transform: scale(0);
@@ -25,9 +41,9 @@
 }
 
 .real {
-  width: 100px;
-  height: 105px;
+  height: inherit;
+  width: 100%;
   opacity: 0;
   position: absolute;
-  z-index: 1;
+  z-index: 0;
 }

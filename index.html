@@ -1,22 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
   <head>
     <title>Назва сторінки</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
+    <!-- <style>
+      .container {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0px 8px 0px 0px;
+      }
+
+      .box {
+        flex-grow: 1;
+        min-width: 60px;
+        height: 105px;
+        margin: 5px 5px 5px 5px;
+      }
+
+      .box2 {
+        flex-grow: 1;
+        min-width: 100px;
+        height: 105px;
+        margin: 5px 5px 5px 5px;
+      }
+
+      .custom {
+        height: 100%;
+        width: 100%;
+        background-color: yellow;
+        position: relative;
+        z-index: -2;
+      }
+
+      .custom::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: green;
+        position: absolute;
+        transform: scale(0);
+        z-index: -1;
+      }
+
+      .real:checked + .custom::before {
+        transform: scale(1);
+      }
+
+      .real {
+        height: inherit;
+        width: 100%;
+        opacity: 0;
+        position: absolute;
+        z-index: 0;
+      }
+    </style> -->
   </head>
   <body>
-    <div>
-      <input type="checkbox" class="real" />
-      <div class="custom">1</div>
-      <input type="checkbox" class="real" />
-      <div class="custom">2</div>
-      <input type="checkbox" class="real" />
-      <div class="custom">3</div>
-    </div>
-    <div>
-      <input type="checkbox" class="real" />
-      <div class="custom">4</div>
+    <div class="container">
+      <div class="box">
+        <input type="checkbox" class="real" />
+        <div class="custom">1</div>
+      </div>
+      <div class="box">
+        <input type="checkbox" class="real" />
+        <div class="custom">2</div>
+      </div>
+      <div class="box">
+        <input type="checkbox" class="real" />
+        <div class="custom">3</div>
+      </div>
+      <div class="box">
+        <input type="checkbox" class="real" />
+        <div class="custom">4</div>
+      </div>
+      <div class="box">
+        <input type="checkbox" class="real" />
+        <div class="custom">5</div>
+      </div>
+      <div class="box">
+        <input type="checkbox" class="real" />
+        <div class="custom">6</div>
+      </div>
+      <div class="box">
+        <input type="checkbox" class="real" />
+        <div class="custom">7</div>
+      </div>
+      <div class="box2">
+        <input type="checkbox" class="real" />
+        <div class="custom">8</div>
+      </div>
+      <div class="box">
+        <input type="checkbox" class="real" />
+        <div class="custom">9</div>
+      </div>
     </div>
   </body>
 </html>
